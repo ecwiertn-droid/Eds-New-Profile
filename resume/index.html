@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Edward Cwiertniewicz</title>
+  <meta name="description" content="Resume of Edward Cwiertniewicz, Senior Technical Product Manager / Technical Product Owner / Technical Program Manager.">
+  <meta property="og:title" content="Resume | Edward Cwiertniewicz">
+  <meta property="og:description" content="Senior Technical Product Manager / Technical Product Owner / Technical Program Manager.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d10'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23c6ff3d'%3EEC%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #12151a;
+      --line: #262b33;
+      --text: #eef1f4;
+      --muted: #9aa3ae;
+      --accent: #c6ff3d;
+      --accent-ink: #0b0d10;
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "Inter", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+
+    .bar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px clamp(16px, 4vw, 48px); background: rgba(11,13,16,.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .logo { font-family: var(--display); font-weight: 700; font-size: 22px; text-decoration: none; letter-spacing: -.02em; }
+    .logo span { color: var(--accent); }
+    .bar-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: 14px; text-decoration: none; border: 1px solid var(--line); background: none; color: var(--text); cursor: pointer; font-family: var(--body); }
+    .btn:hover { border-color: var(--text); }
+    .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+    .page { max-width: 880px; margin: 0 auto; padding: 56px clamp(16px, 4vw, 48px) 80px; }
+    header.top h1 { font-family: var(--display); font-size: clamp(36px, 6vw, 56px); line-height: 1.05; letter-spacing: -.03em; }
+    header.top h1 .dot { color: var(--accent); }
+    .title { margin-top: 12px; font-size: 18px; font-weight: 600; color: var(--accent); }
+    .contact { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 15px; }
+    .contact a { text-decoration: none; border-bottom: 1px solid var(--line); }
+    .contact a:hover { color: var(--text); border-color: var(--text); }
+
+    section { margin-top: 48px; }
+    h2 { font-family: var(--display); font-size: 14px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+    p.summary { color: var(--text); }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    li::marker { color: var(--accent); }
+
+    .skills { display: grid; gap: 12px; }
+    .skills div { display: grid; grid-template-columns: 190px 1fr; gap: 12px; }
+    .skills dt { font-weight: 600; }
+    .skills dd { color: var(--muted); }
+
+    .job { padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .job:first-of-type { padding-top: 0; }
+    .job:last-child { border-bottom: 0; }
+    .job h3 { font-family: var(--display); font-size: 20px; line-height: 1.3; }
+    .meta { color: var(--muted); font-size: 15px; margin-top: 2px; }
+    .meta strong { color: var(--text); font-weight: 600; }
+    h4 { font-size: 14px; font-weight: 600; color: var(--accent); margin: 16px 0 4px; }
+
+    .tech { color: var(--muted); }
+    .edu p + p { margin-top: 6px; color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 24px clamp(16px, 4vw, 48px); color: var(--muted); font-size: 14px; text-align: center; }
+
+    @media (max-width: 600px) {
+      .skills div { grid-template-columns: 1fr; gap: 2px; }
+      .bar-actions .hide-sm { display: none; }
+    }
+
+    @media print {
+      :root { --bg: #fff; --text: #111; --muted: #444; --line: #ccc; --accent: #111; }
+      body { font-size: 11pt; }
+      .bar, footer { display: none; }
+      .page { padding: 0; max-width: none; }
+      section { margin-top: 22px; break-inside: auto; }
+      .job { break-inside: avoid; padding: 12px 0; }
+      a { border: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="logo" href="../">EC<span>.</span></a>
+  <div class="bar-actions">
+    <a class="btn hide-sm" href="../">Main site</a>
+    <button class="btn" onclick="window.print()">Print</button>
+    <a class="btn primary" href="../Ed-Cwiertniewicz-Resume.pdf" download>Download PDF</a>
+  </div>
+</div>
+
+<main class="page">
+
+  <header class="top">
+    <h1>Edward Cwiertniewicz<span class="dot">.</span></h1>
+    <p class="title">Senior Technical Product Manager / Technical Product Owner / Technical Program Manager</p>
+    <p class="contact">
+      <span>Greater Philadelphia area</span>
+      <a href="mailto:ecwiertn@gmail.com">ecwiertn@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ed-cwiertniewicz-21b5a24/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Product leader with 10+ years owning enterprise product roadmaps in financial services, healthcare, and life sciences. Experienced leveraging AI platforms including Gemini, Claude, ChatGPT and NotebookLM to automate product development workflows, accelerate delivery, enhance operational efficiency, and improve cross-functional collaboration and decision-making. Strong background leading global teams of 20–40+ members, modernizing platforms, and delivering data-driven solutions aligned to business objectives. Proven track record of improving delivery speed by 60–80%, building high-performing Agile organizations, and partnering closely with business leaders to translate strategy into measurable results.</p>
+  </section>
+
+  <section>
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>Utilized AI toolsets to streamline product management activities including requirements generation, backlog refinement, roadmap planning, documentation, and stakeholder reporting, resulting in improved delivery velocity and team efficiency.</li>
+      <li>Cut client implementation timelines by up to 80% across 15 enterprise deployments that allowed stakeholders to launch new reporting features monthly vs quarterly basis</li>
+      <li>Reduced delivery cycles by 60%, shortening application development timelines from 9 months to 4 months</li>
+      <li>Delivered 2,000+ hours of annual operational savings through workflow and platform automation</li>
+      <li>Improved healthcare analytics capabilities through advanced modeling used for predictive insights</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Core Skills</h2>
+    <dl class="skills">
+      <div><dt>Leadership &amp; Delivery</dt><dd>Team Leadership • Hiring &amp; Onboarding • Global Delivery • Stakeholder Management • Vendor Management</dd></div>
+      <div><dt>Technology</dt><dd>AWS • Azure • Databricks • SQL Server • .NET • React • Angular • Appian</dd></div>
+      <div><dt>Execution</dt><dd>Agile • SAFe • DevOps • CI/CD • Program &amp; Portfolio Management • PI Planning • Risk Management • Governance &amp; Compliance • SDLC</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <article class="job">
+      <h3>Director of Analytics / Senior Product Manager / Senior Product Owner</h3>
+      <p class="meta"><strong>ConcertAI</strong> · 2021 – August 2026</p>
+      <ul>
+        <li>Led development and delivery of an enterprise analytics platform supporting 15+ clients</li>
+        <li>Managed a cross‑functional team of 20+ across engineering, QA, product, and support</li>
+        <li>Owned hiring for all developers on the team and brought in a vendor partnership to build out dedicated QA ownership; managed performance evaluations for the full team of 20+</li>
+        <li>Owner of product planning, release execution, and prioritization tied to client outcomes focusing on building out product KPIs with continual maturation of Product Roadmap. Team use of MoSCoW framework with the points assignment</li>
+        <li>Built the full story lifecycle in Jira (epics, user stories, acceptance criteria) and built data governance into the epics for every deliverable, including the handling of PII (PHI) data</li>
+      </ul>
+      <h4>Key Contributions</h4>
+      <ul>
+        <li>Reduced platform implementation timelines by 80%, speeding value delivery to clients – ability to launch features monthly vs quarterly</li>
+        <li>Delivered platform enhancements including improved reporting (80% qc checking of data), automation (reports were able to be delivered daily vs monthly automated), audit capabilities (automated processes checking successful completion, and transparency</li>
+        <li>Guided integration of advanced analytical models and reduced data retrieval times by 70% and improving access to patient information for better patient outcomes</li>
+        <li>Completed a major client platform transformation 4 months ahead of schedule – 60% savings for time to market product implementation</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Senior Development Manager (Client: SEI)</h3>
+      <p class="meta"><strong>Capgemini</strong> · 2019 – 2021</p>
+      <ul>
+        <li>Led delivery teams supporting large financial services programs</li>
+        <li>Worked closely with client leadership to align delivery priorities with business goals</li>
+        <li>Owned interviewing for all new hires on the account</li>
+        <li>Oversaw a portfolio of 20+ initiatives across Investment Management platforms; built the full story lifecycle in Jira (epics, user stories, acceptance criteria)</li>
+      </ul>
+      <h4>Key Achievements</h4>
+      <ul>
+        <li>Implemented workflow and support automation saving 2,000+ hours annually – this allowed multiple features to be added to products</li>
+        <li>Reduced production downtime by 80% through process improvements that allowed faster resolutions and less downtime</li>
+        <li>Designed enterprise Jira Service Management solution across multiple teams</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Senior Agile Product Owner / Technical Delivery Lead</h3>
+      <p class="meta"><strong>Barclays</strong> · 2012 – 2019</p>
+      <ul>
+        <li>Led product strategy and delivery across payments, BPM (Appian), and customer platforms</li>
+        <li>Managed cross-functional Agile teams and multi-year product roadmaps; built the full story lifecycle in Jira (epics, user stories, acceptance criteria)</li>
+        <li>Built out the Agile delivery teams, owning interviewing and hiring for Scrum Masters, developers, and QA; managed outside vendor SOWs and deliverables</li>
+        <li>Supported enterprise Agile adoption across 100+ teams and 1,200+ employees</li>
+      </ul>
+      <h4>Key Achievements</h4>
+      <ul>
+        <li>Reduced time-to-market by 60% (9 months → 4 months)</li>
+        <li>Led modernization of Payments and Complaints platforms through migration to Appian and automated workflows, reducing payment processing time by 50% and accelerating dispute resolution to improve customer satisfaction.</li>
+        <li>Managed enterprise Agile adoption from pilot to full-scale implementation within 2 years of start for entire company</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Senior Program Manager / Software Development Manager</h3>
+      <p class="meta"><strong>Wilmington Trust Bank</strong> · 2006 – 2012</p>
+      <ul>
+        <li>Led modernization of wealth management applications and client-facing systems</li>
+        <li>Partnered with executive leadership to shift delivery from Waterfall to Agile</li>
+        <li>Managed vendor selection, contract negotiations, and delivery execution</li>
+      </ul>
+      <h4>Key Achievements</h4>
+      <ul>
+        <li>Led the modernization of legacy systems by migrating applications to scalable .NET/C# web-based platforms, aligning technology architecture with the company’s enterprise strategy.</li>
+        <li>Designed an enterprise notification engine supporting customizable client alerts</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>Vice President – Senior Technical Manager / Project Manager</h3>
+      <p class="meta"><strong>MBNA</strong> · 2000 – 2006</p>
+      <ul>
+        <li>Managed global team of 30+ across development, QA, and product functions</li>
+        <li>Grew a core team from 3 to 25+ across content, DevOps, database, web development, and QA disciplines, owning interviewing, hiring, onboarding, and performance management for every hire</li>
+        <li>Led enterprise intranet and communication platform initiatives</li>
+      </ul>
+      <h4>Key Achievements</h4>
+      <ul>
+        <li>Delivered a corporate intranet supporting 30,000+ employees and 500,000 daily page views</li>
+        <li>Implemented an enterprise learning management system with 1,000+ courses</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Technology Experience</h2>
+    <p class="tech">AWS, Azure, Databricks, SQL Server, MySQL, Oracle, Power BI, .NET, React, Angular, Appian, MongoDB, Jira, Confluence, Azure DevOps, GitHub, Microsoft Project, Smartsheet, AI/LLM Tools (ChatGPT, Copilot, Claude), Rally, EASE, Web Methods</p>
+  </section>
+
+  <section class="edu">
+    <h2>Education &amp; Credentials</h2>
+    <p><strong>B.S. Computer Science</strong> – Widener University</p>
+    <p>PMP • Certified ScrumMaster (CSM) • Certified Scrum Product Owner (CSPO)</p>
+  </section>
+
+</main>
+
+<footer>
+  <a href="../">← Back to the main site</a>
+</footer>
+
+</body>
+</html>
