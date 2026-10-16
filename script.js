@@ -44,7 +44,7 @@ const countUp = el => {
 };
 
 // Reveal on scroll
-const revealTargets = document.querySelectorAll('.section-head, .about-grid, .skills, .job, .case, .project, .activity, .contact');
+const revealTargets = document.querySelectorAll('.section-head, .about-grid, .skills, .job, .case, .project, .activity, .offer, .steps, .build-cta, .contact');
 revealTargets.forEach(el => el.classList.add('reveal'));
 
 if ('IntersectionObserver' in window) {
