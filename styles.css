@@ -221,6 +221,12 @@ main > section { padding-left: clamp(16px, 4vw, 48px); padding-right: clamp(16px
 @media (max-width: 1000px) { .steps { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 760px) { .offer-grid, .steps { grid-template-columns: 1fr; } }
 
+/* PROFILE PHOTO */
+.hero-photo { width: clamp(112px, 14vw, 150px); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; margin: 0 auto 28px; border: 3px solid var(--accent); box-shadow: 0 10px 40px rgba(0,0,0,.45); }
+.build-me { display: flex; align-items: center; gap: 22px; }
+.build-photo { width: 84px; height: 84px; flex: none; object-fit: cover; border-radius: 50%; border: 2px solid var(--accent); }
+@media (max-width: 760px) { .build-me { flex-direction: column; align-items: flex-start; gap: 16px; } .build-photo { width: 72px; height: 72px; } }
+
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
