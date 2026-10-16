@@ -388,8 +388,43 @@
         <img class="build-photo" src="images/edward_profile_250x250.jpg" alt="Ed Cwiertniewicz" width="250" height="250" loading="lazy">
         <p>Have something in mind? Tell me what you need and I'll let you know how I can help.</p>
       </div>
-      <a class="btn primary" href="mailto:ecwiertn@gmail.com?subject=Website%20or%20web%20app%20project">Start a conversation</a>
     </div>
+
+    <!-- START A CONVERSATION: sent through Web3Forms (web3forms.com), which emails each message to Ed -->
+    <form class="build-form" id="build-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Paste your Web3Forms access key below (it is safe to be public) -->
+      <input type="hidden" name="access_key" value="e4038ce4-caf0-4175-97a8-1cbaf86c705b">
+      <input type="hidden" name="subject" value="New website / web app inquiry from edwardcwiertniewicz.com">
+      <input type="hidden" name="from_name" value="edwardcwiertniewicz.com">
+
+      <div class="field">
+        <label for="bf-name">Your name</label>
+        <input id="bf-name" type="text" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="bf-email">Your email</label>
+        <input id="bf-email" type="email" name="email" required autocomplete="email">
+      </div>
+      <div class="field full">
+        <label for="bf-type">What do you need?</label>
+        <select id="bf-type" name="project_type" required>
+          <option value="" disabled selected>Pick one</option>
+          <option>Business website</option>
+          <option>Personal portfolio for my job search</option>
+          <option>Web application</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="bf-msg">Tell me a little about it</label>
+        <textarea id="bf-msg" name="message" rows="5" required></textarea>
+      </div>
+      <div class="form-foot full">
+        <button class="btn primary" type="submit">Start a conversation</button>
+        <p class="form-status" id="bf-status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="form-alt full">Prefer email? Write to <a href="mailto:ecwiertn@gmail.com?subject=Website%20or%20web%20app%20project">ecwiertn@gmail.com</a>.</p>
+    </form>
   </section>
 
   <!-- CONTACT -->

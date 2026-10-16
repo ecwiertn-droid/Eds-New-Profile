@@ -62,3 +62,43 @@ if ('IntersectionObserver' in window) {
   revealTargets.forEach(el => el.classList.add('in'));
   document.querySelectorAll('[data-count]').forEach(n => n.textContent = (+n.dataset.count).toLocaleString());
 }
+
+// Start a conversation form (Web3Forms)
+const buildForm = document.getElementById('build-form');
+if (buildForm) {
+  const status = document.getElementById('bf-status');
+  const btn = buildForm.querySelector('button[type="submit"]');
+  buildForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const key = buildForm.querySelector('[name="access_key"]').value;
+    if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      status.className = 'form-status err';
+      status.textContent = 'The form isn\'t switched on yet. Please email ecwiertn@gmail.com instead.';
+      return;
+    }
+    btn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Sending…';
+    try {
+      const data = Object.fromEntries(new FormData(buildForm));
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.status === 200 && json.success !== false) {
+        buildForm.reset();
+        status.className = 'form-status ok';
+        status.textContent = 'Thanks! Your message is on its way. I\'ll get back to you soon.';
+      } else {
+        throw new Error(json.message || 'Send failed');
+      }
+    } catch (err) {
+      status.className = 'form-status err';
+      status.textContent = 'Something went wrong sending that. Please email ecwiertn@gmail.com instead.';
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
